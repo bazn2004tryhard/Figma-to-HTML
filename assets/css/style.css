@@ -43,6 +43,18 @@ a {
   line-height: 1.27; /* 126.316% */
   letter-spacing: -0.76px;
 }
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.break-all {
+  word-break: break-all;
+}
 /* ***************************header*************** */
 .header {
   background: #fffcf4;
@@ -305,6 +317,7 @@ a {
   gap: 30px;
 }
 .popular .course-item {
+  flex: 1;
   width: 37rem;
   height: 46.6rem;
   border-radius: 12px;

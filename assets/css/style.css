@@ -474,7 +474,7 @@ blockqoute {
   width: 16rem;
   color: #fff;
 }
-/* =======================features ========================= */
+/* =======================features 1 ========================= */
 .features {
   margin-top: 135px;
   padding: 65px 0;
@@ -516,4 +516,21 @@ blockqoute {
   width: 137px;
   height: 50px;
   background: var(--primary-color);
+}
+/* =======================features 2 ========================= */
+.features-2nd {
+  margin-top: 70px;
+}
+.features.features-2nd .body {
+  flex-direction: row-reverse;
+}
+.features-2nd .content {
+  width: 49%;
+}
+.features-2nd .images img {
+  width: 47rem;
+  height: 44rem;
+  object-fit: cover;
+  border-radius: 20px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
 }

@@ -541,10 +541,13 @@ blockqoute {
   background: #fffcf4;
 }
 .blog .blog-top {
+  display: block;
+  justify-content: center;
   text-align: center;
 }
 
-.blog .blog-top .desc {
+.blog .blog-top .desc.desc-no2 {
+  display: inline-block;
   margin-top: auto;
   margin-right: auto;
   width: 44.8rem;
@@ -555,14 +558,19 @@ blockqoute {
 }
 
 .blog .blog-list {
+  overflow: hidden;
+  gap: 30px;
   display: flex;
   margin-top: 55px;
-  gap: 30px;
 }
 .blog .item {
-  width: 33.33%;
+  flex-shrink: 0;
+  width: calc(33.33% - 20px);
   border-radius: 16px;
   background: #fff;
+
+  transition: all ease 0.5s;
+  transform: translateX(-100%);
 }
 .blog .item:hover {
   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
@@ -619,7 +627,96 @@ blockqoute {
 }
 .blog .item .btn {
   margin-top: 12px;
+  font-size: 1.4rem;
 }
 .blog .item .btn:hover {
   background-color: var(--primary-color);
+}
+.blog .dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.blog .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5f5b53;
+  margin-top: 38px;
+  cursor: pointer;
+}
+.blog .dot.active {
+  background: var(--primary-color);
+  cursor: default;
+}
+/* **************************footer ********* */
+.footer {
+  background: #2e2100;
+  padding: 96px 135px 0;
+}
+
+.footer .row {
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+  display: flex;
+}
+.footer .row .column {
+  width: 26.6%;
+}
+.footer .row .column:first-child {
+  width: 35%;
+}
+.footer .desc {
+  margin-top: 18px;
+  max-width: 267px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+.footer .socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.footer .title {
+  padding-right: 48px;
+  padding-bottom: 14px;
+  display: inline-block;
+  border-bottom: 1px solid #59554b;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+
+.footer .list {
+  margin-top: 28px;
+}
+.footer .list a {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer .list li:last-child a {
+  margin-bottom: 0;
+}
+.footer .list strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86; /* 175% */
+}
+.footer .copyright {
+  padding: 28px 0;
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
 }
